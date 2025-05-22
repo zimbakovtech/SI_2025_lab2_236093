@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SILab2Test {
 
-    @Test   
+    @Test
     void checkCart() {
         List<Item> items = new ArrayList<Item>();
     }
