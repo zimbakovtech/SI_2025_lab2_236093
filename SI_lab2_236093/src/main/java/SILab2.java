@@ -52,19 +52,15 @@ public class SILab2 {
         if (allItems == null){ // 1
             throw new RuntimeException("allItems list can't be null!"); // 2
         }
-
         double sum = 0; // 3
-
         for (int i = 0; i < allItems.size(); i++){ // 4
             Item item = allItems.get(i); // 5
             if (item.getName() == null || item.getName().isEmpty()){ // 6
                 throw new RuntimeException("Invalid item!"); // 7
             }
-
             if (item.getPrice() > 300 || item.getDiscount() > 0 || item.getQuantity() > 10){ // 8
                 sum -= 30; // 9
             }
-
             if (item.getDiscount() > 0){ // 10
                 sum += item.getPrice()*(1-item.getDiscount())*item.getQuantity(); // 11
             }
@@ -72,7 +68,6 @@ public class SILab2 {
                 sum += item.getPrice()*item.getQuantity(); // 12
             }
         }
-
         if (cardNumber != null && cardNumber.length() == 16) { // 13
             String allowed = "0123456789"; // 14
             char[] chars = cardNumber.toCharArray();
@@ -86,7 +81,6 @@ public class SILab2 {
         else{
             throw new RuntimeException("Invalid card number!"); // 19
         }
-
         return sum; // 20
     } // 21
 }
