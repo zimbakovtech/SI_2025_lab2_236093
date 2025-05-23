@@ -34,19 +34,19 @@ class SILab2Test {
 
     @Test
     void checkCartMultipleCondition() {
-        // TXX
+        // 1
         List<Item> allItems = new LinkedList<>();
-        allItems.add(new Item("Laptop", 0, 310, 0));
+        allItems.add(new Item("Laptop", 0, 250, 0));
         assertEquals(-30, siLab2.checkCart(allItems, "1234512345123456"));
-        // FTX
+        // 2
         List<Item> allItems2 = new LinkedList<>();
         allItems2.add(new Item("Laptop", 0, 1, 0.1));
         assertEquals(-30, siLab2.checkCart(allItems2, "1234512345123456"));
-        // FFF
+        // 3
         List<Item> allItems3 = new LinkedList<>();
         allItems3.add(new Item("Laptop", 2, 3, 0));
         assertEquals(6, siLab2.checkCart(allItems3, "1234512345123456"));
-        // FFT
+        // 4
         List<Item> allItems4 = new LinkedList<>();
         allItems4.add(new Item("Laptop", 15, 10, 0.1));
         assertEquals(105, siLab2.checkCart(allItems4, "1234512345123456"));
